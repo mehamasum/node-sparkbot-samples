@@ -55,7 +55,7 @@ app.route("/")
 //
 // [WORKAROUND] in some container situation (ie, Cisco Shipped), we need to use an OVERRIDE_PORT to force our bot to start and listen to the port defined in the Dockerfile (ie, EXPOSE), 
 // and not the PORT dynamically assigned by the host or scheduler.
-var port = process.env.OVERRIDE_PORT || process.env.PORT || 80;
+var port = process.env.OVERRIDE_PORT || process.env.PORT || 8080;
 app.listen(port, function () { 
     console.log("Cisco Spark Bot started at http://localhost:" + port + "/");
     console.log("   GET  / for health checks");
